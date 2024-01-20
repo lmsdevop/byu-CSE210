@@ -49,7 +49,7 @@ public class Program
                 case "3":
                     Console.Write("Enter filename to save: ");
                     string saveFileName = Console.ReadLine();
-                    journal.SaveToFile(saveFileName);
+                    journal.SaveToFile($"{saveFileName}.txt");
                     break;
 
                 case "4":
