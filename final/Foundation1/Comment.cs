@@ -3,17 +3,17 @@ using System.Collections.Generic;
 
 class Comment
 {
-    public string CommenterName { get; }
-    public string CommentText { get; }
+    public string _commenterName { get; }
+    public string _commentText { get; }
 
     public Comment(string commenterName, string commentText)
     {
-        CommenterName = commenterName;
-        CommentText = commentText;
+        _commenterName = commenterName;
+        _commentText = commentText;
     }
 
     public override string ToString()
     {
-        return $"{CommenterName}: {CommentText}";
+        return $"{_commenterName}: {_commentText}";
     }
 }

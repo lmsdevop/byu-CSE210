@@ -1,17 +1,17 @@
 class Lecture : Event
 {
-    public string Speaker { get; set; }
-    public int Capacity { get; set; }
+    public string _speaker { get; set; }
+    public int _capacity { get; set; }
 
     public Lecture(string title, string description, DateTime date, TimeSpan time, Address address, string speaker, int capacity)
         : base(title, description, date, time, address)
     {
-        Speaker = speaker;
-        Capacity = capacity;
+        _speaker = speaker;
+        _capacity = capacity;
     }
 
     public override string GetFullDetails()
     {
-        return base.GetFullDetails() + $"\nSpeaker: {Speaker}\nCapacity: {Capacity}";
+        return base.GetFullDetails() + $"\nSpeaker: {_speaker}\nCapacity: {_capacity}";
     }
 }

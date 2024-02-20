@@ -1,20 +1,20 @@
 class Address
 {
-    public string Street { get; set; }
-    public string City { get; set; }
-    public string State { get; set; }
-    public string Country { get; set; }
+    public string _street { get; set; }
+    public string _city { get; set; }
+    public string _state { get; set; }
+    public string _country { get; set; }
 
     public Address(string street, string city, string state, string country)
     {
-        Street = street;
-        City = city;
-        State = state;
-        Country = country;
+        _street = street;
+        _city = city;
+        _state = state;
+        _country = country;
     }
 
     public override string ToString()
     {
-        return $"{Street}, {City}, {State}, {Country}";
+        return $"{_street}, {_city}, {_state}, {_country}";
     }
 }

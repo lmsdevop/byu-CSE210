@@ -1,12 +1,12 @@
 abstract class Activity
 {
-    public DateTime Date { get; set; }
-    public int LengthMinutes { get; set; }
+    public DateTime _date { get; set; }
+    public int _lengthMinutes { get; set; }
 
     public Activity(DateTime date, int lengthMinutes)
     {
-        Date = date;
-        LengthMinutes = lengthMinutes;
+        _date = date;
+        _lengthMinutes = lengthMinutes;
     }
 
     // Abstract methods to be overridden by derived classes
@@ -17,6 +17,6 @@ abstract class Activity
     // Method to get summary information
     public string GetSummary()
     {
-        return $"{Date.ToShortDateString()} {GetType().Name} ({LengthMinutes} min) - Distance: {GetDistance()}, Speed: {GetSpeed()}, Pace: {GetPace()}";
+        return $"{_date.ToShortDateString()} {GetType().Name} ({_lengthMinutes} min) - Distance: {GetDistance()}, Speed: {GetSpeed()}, Pace: {GetPace()}";
     }
 }

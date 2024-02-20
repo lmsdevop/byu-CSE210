@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Video> videos = new List<Video>
+        List<Video> _videos = new List<Video>
         {
             new YouTubeVideo("Video 1", "Author 1", 120),
             new YouTubeVideo("Video 2", "Author 2", 180),
@@ -12,18 +12,18 @@ class Program
         };
 
         // Adding comments to videos
-        videos[0].AddComment("User 1", "Great video!");
-        videos[0].AddComment("User 2", "Very informative");
-        videos[0].AddComment("User 3", "Nice work!");
+        _videos[0].AddComment("User 1", "Great video!");
+        _videos[0].AddComment("User 2", "Very informative");
+        _videos[0].AddComment("User 3", "Nice work!");
 
-        videos[1].AddComment("User 4", "Loved it!");
-        videos[1].AddComment("User 5", "Amazing content!");
+        _videos[1].AddComment("User 4", "Loved it!");
+        _videos[1].AddComment("User 5", "Amazing content!");
 
-        videos[2].AddComment("User 6", "Interesting topic!");
-        videos[2].AddComment("User 7", "Informative video!");
+        _videos[2].AddComment("User 6", "Interesting topic!");
+        _videos[2].AddComment("User 7", "Informative video!");
 
         // Displaying video information
-        foreach (var video in videos)
+        foreach (var video in _videos)
         {
             video.DisplayInfo();
             Console.WriteLine();

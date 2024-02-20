@@ -1,24 +1,24 @@
 class Cycling : Activity
 {
-    public double Speed { get; set; }
+    public double _speed { get; set; }
 
     public Cycling(DateTime date, int lengthMinutes, double speed) : base(date, lengthMinutes)
     {
-        Speed = speed;
+        _speed = speed;
     }
 
     public override double GetDistance()
     {
-        return Speed * (LengthMinutes / 60.0);
+        return _speed * (_lengthMinutes / 60.0);
     }
 
     public override double GetSpeed()
     {
-        return Speed;
+        return _speed;
     }
 
     public override double GetPace()
     {
-        return 60 / Speed;
+        return 60 / _speed;
     }
 }
